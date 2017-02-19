@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+
+
+
+  class vehicle { //base  class whose contrsuctor accepts name and type
+        constructor(name, type) {
+            this.name = name;
+            this.type = type;
+        }
+        getVehicleInfo() {//function in base class which prints the name and type
+           console.log(`Your vehicle is ${this.name}` of type ${this.type} )
+        }
+    }
+    
+    class car extends vehicle {//derived class car
+        constructor(name) {
+            super("car",name);//calls base constructor with name=car  and type
+            
+        }
+        
+    }
+
+
+class bike extends vehicle {//derived class bike
+        constructor(name) {
+            super("bike", name);//calls base contructor with name=bike and type
+            
+        }
+        
+    }
+
+    class ship extends vehicle {//derived class ship
+        constructor(name) {
+            super("ship",name);//calls base constructor with name=ship and bike
+            
+        }
+        
+    }
+
+    var hondaCity = new car("Honda City");//creating new object of class Car and passing type="Honda city"
+    var harleyDavidSon = new bike("Harley Davidson");//creating new object of class bike and passing type="Harley"
+    var insVikrant = new ship("INS Vikrant");//creating new object of type ship and passing type="INS Vikrant"
+console.log(hondaCity.getVehicleInfo());//printing the info by invoking the method of base class
+console.log(harleyDavidSon.getVehicleInfo());//same as above
+console.log(insVikrant.getVehicleInfo());//same as above
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>
